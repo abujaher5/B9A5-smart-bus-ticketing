@@ -4,6 +4,178 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart bus ticketing</title>
+    <!-- daisy ui and tailwind css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body></body>
+  <body class="mx-auto max-w-[1200px]">
+    <header>
+      <!-- Navbar -->
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Item 1</a></li>
+                <li>
+                  <a>Parent</a>
+                  <ul class="p-2">
+                    <li><a>Submenu 1</a></li>
+                    <li><a>Submenu 2</a></li>
+                  </ul>
+                </li>
+                <li><a>Item 3</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-xl font-extrabold">P-Ticket</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Item 1</a></li>
+              <li>
+                <details>
+                  <summary>Parent</summary>
+                  <ul class="p-2">
+                    <li><a>Submenu 1</a></li>
+                    <li><a>Submenu 2</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li><a>Item 3</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn">Bus</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Banner section -->
+
+      <div
+        class="hero w-full h-[550px] bg-[url('images/banner.png')] rounded-2xl bg-no-repeat bg-cover"
+      >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-4xl text-white font-bold">
+              End-to-End Travel with
+              <br /><span class="text-[#1DD100]">P Paribahan</span>
+            </h1>
+            <p class="py-6 text-white">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+              excepturi exercitationem quasi.
+            </p>
+            <button class="btn bg-[#1DD100] text-black">Buy Tickets</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Best offers section -->
+      <section class="mt-8">
+        <h1 class="text-4xl font-bold text-black text-center">
+          Best offers for you
+        </h1>
+        <!-- card -->
+        <div class="flex justify-evenly gap-10 mt-8">
+          <!-- card 1 -->
+          <div
+            class="w-1/2 h-[200px] bg-[#FFBF0F] text-primary-content flex justify-around rounded-xl text-[#030712]"
+          >
+            <div
+              class="flex flex-1 flex-col justify-center items-center space-y-5"
+            >
+              <h2 class="text-4xl font-extrabold">15% OFF</h2>
+              <h4>on your purchase</h4>
+              <p>use by January 2024</p>
+            </div>
+            <div>
+              <img class="h-[200px]" src="images/cupon-devider.png" alt="" />
+            </div>
+            <div
+              class="flex px-7 flex-col justify-center items-center space-y-5"
+            >
+              <h1 class="text-4xl font-bold">NEW<sub>15</sub></h1>
+              <p class="text-xl">coupon Code</p>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div
+            class="w-1/2 h-[200px] bg-[#F78C9C] text-primary-content flex justify-around rounded-xl text-[#030712]"
+          >
+            <div
+              class="flex flex-1 flex-col justify-center items-center space-y-5"
+            >
+              <h2 class="text-4xl font-extrabold">20% OFF</h2>
+              <h4>on your purchase</h4>
+              <p>use by January 2024</p>
+            </div>
+            <div>
+              <img class="h-[200px]" src="images/cupon-devider.png" alt="" />
+            </div>
+            <div
+              class="flex px-7 flex-col justify-center items-center space-y-5"
+            >
+              <h1 class="text-4xl font-bold">couple 20</h1>
+              <p class="text-xl">coupon Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <button
+            class="btn text-xl text-[#1DD100] border-1 font-semibold border-[#1DD100]"
+          >
+            See All Offers
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+
+    <footer
+      class="footer p-10 bg-neutral text-neutral-content flex justify-between mt-10"
+    >
+      <div>
+        <aside>
+          <h2 class="text-2xl text-white font-bold">P-Ticket</h2>
+          <p>
+            P-Ticket is a digital platform to make your <br />
+            daily commuting better.
+          </p>
+        </aside>
+        <nav>
+          <p>@all rights reserved, P-Ticket services limited.2024</p>
+        </nav>
+      </div>
+      <div>
+        <h4>Download our app</h4>
+      </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+  </body>
 </html>
