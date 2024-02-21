@@ -66,7 +66,8 @@ const allBtn = document.getElementsByClassName("btnonly");
 
 let count = 8;
 let seatCount = 0;
-let totalPrice = 1;
+
+let totalPrice = 0;
 let ticketPrice = 550;
 
 for (const btn of allBtn) {
@@ -74,6 +75,7 @@ for (const btn of allBtn) {
     //seat left
     if (count > 4) {
       count = count - 1;
+      totalPrice = ticketPrice + totalPrice;
     }
 
     document.getElementById("seat-left").innerText = count;
@@ -82,10 +84,12 @@ for (const btn of allBtn) {
       seatCount = seatCount + 1;
     }
     document.getElementById("seat-count").innerText = seatCount;
+
     // total price
-    if (totalPrice < 4) {
-      totalPrice = ticketPrice * totalPrice;
-    }
+
     document.getElementById("total-price").innerText = totalPrice;
+
+    // grand total
+    document.getElementById("grand-total").innerText = totalPrice;
   });
 }
